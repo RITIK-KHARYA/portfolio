@@ -1,27 +1,13 @@
 import Image from "next/image";
 import ritik from "./Public/static/image/ritik.png";
 import yo from "./Public/static/image/yo.png";
+import { ModeToggle } from "@/components/togglebutton";
+import CardDemo from "./home/page";
 
 export default function Page() {
   return (
     <div className="flex h-full flex-col items-center justify-center overflow-y-auto">
-      <div className="w-[680px] h-[200px]">
-        <div className="flex flex-row items-center justify-between h-[175px]">
-          <h1 className="text-5xl font-bold m-2">Hey, I'm Ritik 😎</h1>
-          <Image
-            src={yo}
-            alt=""
-            className="rounded-full object-cover w-24 h-24 m-2 hover:opacity-75 hover:scale-125 transition-transform duration-150 ease-in-out"
-            width={90}
-            height={90}
-          />
-        </div>
-        <span className="text-2xl">
-          19 years old sophomore full stack web developer
-        </span>
-      </div>
-      <hr className="w-[680px] border-neutral-600/90 m-5" />
-
+      {/* <hr className="w-[680px] border-neutral-600/90 m-5" /> */}1
       <div className="w-[680px] flex items-center justify-center flex-col">
         <div className="relative">
           <div className="absolute inset-0 w-full h-full rounded-xl bg-gradient-to-r from-blue-500 via-pink-500 to-purple-500 blur-md"></div>
@@ -93,8 +79,17 @@ export default function Page() {
         <hr className="w-full border-neutral-600/90 m-5" />
 
         <div>
-          <h2 className="text-3xl m-2">My Project</h2>
-          <div></div>
+          <h2 className="text-3xl m-2 text-center">My Project</h2>
+          <div className="text-2xl flex justify-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-pink-500 to-orange-400">
+            Some of my cool stuff
+          </div>
+          <div className="w-full h-[680px] grid  p-4 space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <CardDemo />
+              <CardDemo />
+              <CardDemo /> <CardDemo />
+            </div>
+          </div>
         </div>
       </div>
     </div>
