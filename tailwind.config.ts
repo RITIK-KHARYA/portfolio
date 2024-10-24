@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        playwrite: [`var(--font-playwrite-england)`],
+      },
     },
   },
   plugins: [],
