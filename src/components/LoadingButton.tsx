@@ -14,11 +14,11 @@ export default function LoadingButton({
 }: LoadingButtonProps) {
   return (
     <Button
-      className={cn(`flex items-center gap-2 w-24 h-10`, className)}
+      className={cn(`flex items-center gap-2 w-24 h-8`, className)}
       disabled={loading || disabled}
       {...props}
     >
-      {loading && <Loader className="animate-spin gap-2 size-5" />}
+      {loading && <Loader className="animate-spin gap-2 size-5 cursor-none" />}
       {props.children}
     </Button>
   );
