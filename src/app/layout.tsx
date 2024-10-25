@@ -21,10 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`$ ${poppins.variable} antialiased bg-black`}>
-        {children}
-      </body>
+    <html lang="en" className="dark">
+      {/* <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      > */}
+      <body className={`$ ${poppins.variable} antialiased`}>{children}</body>
+      {/* </ThemeProvider> */}
     </html>
   );
 }

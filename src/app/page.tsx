@@ -40,7 +40,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex h-full flex-col items-center justify-center overflow-y-auto">
+    <div className="flex h-full flex-col items-center justify-center overflow-y-auto bg-black">
       <div className="h-[100px] flex flex-row justify-between items-center w-[680px] bg-neutral-900 rounded-2xl m-5">
         <div className="flex flex-col items-center justify-start m-4">
           <h1 className="text-3xl font-bold  ">Hyy, I am Ritik 👽</h1>
@@ -114,9 +114,11 @@ export default function Page() {
         <hr className="w-full border-neutral-600/90 m-5" />
 
         <div className="grid grid-cols-2">
-          <h2 className="text-3xl m-2">Skills</h2>
-          <div className="">
-            <span className="text-neutral-400 text-lg font-semibold ">
+          <h2 className="text-3xl m-2 flex flex-row items-center justify-start">
+            Skills
+          </h2>
+          <div className="flex flex-col space-y-2">
+            <span className="text-neutral-400 text-lg font-semibold flex items-center justify-center  ">
               Front-end
             </span>
             <hr className="w-full border-neutral-500/90 mb-2" />
@@ -128,6 +130,24 @@ export default function Page() {
               <Typos header="React" />
               <Typos header="Nextjs" />
               <Typos header="Tailwind" />
+            </div>
+
+            <span className="text-neutral-400 text-lg font-semibold flex items-center justify-center ">
+              Back-end
+            </span>
+            <hr className="w-full border-neutral-500/90 mb-2" />
+            <div className="grid grid-cols-4 gap-4 ">
+              <Typos header="Node.js" />
+              <Typos header="Express" />
+              <Typos header="Next.js" />
+            </div>
+            <span className="text-neutral-400 text-lg font-semibold flex items-center justify-center ">
+              Database
+            </span>
+            <hr className="w-full border-neutral-500/90 mb-2" />
+            <div className="grid grid-cols-4 gap-4 ">
+              <Typos header="PostgreSQL" />
+              <Typos header="Primsa" />
             </div>
           </div>
         </div>
