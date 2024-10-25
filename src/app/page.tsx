@@ -4,6 +4,8 @@ import yo from "./Public/static/image/artoons.png";
 import { ModeToggle } from "@/components/togglebutton";
 import CardDemo from "./home/page";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Typos from "@/components/typos";
 
 export default function Page() {
   const socialLinks = [
@@ -36,6 +38,7 @@ export default function Page() {
       color: "hover:text-blue-600",
     },
   ];
+
   return (
     <div className="flex h-full flex-col items-center justify-center overflow-y-auto">
       <div className="h-[100px] flex flex-row justify-between items-center w-[680px] bg-neutral-900 rounded-2xl m-5">
@@ -46,10 +49,10 @@ export default function Page() {
         <div className="m-4">
           <Image
             src={yo}
-            alt="yo"
-            width={50}
-            height={50}
-            className="rounded-full w-20 h-20 hover:"
+            alt="ritik"
+            width={1920}
+            height={1080}
+            className="rounded-xl w-20 h-20 object-cover max-h-[300px]"
           />
         </div>
       </div>
@@ -110,25 +113,37 @@ export default function Page() {
         </div>
         <hr className="w-full border-neutral-600/90 m-5" />
 
-        <div>
-          <h2 className="text-3xl m-2">About Me</h2>
-          <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
-            quasi, doloribus cum maxime aperiam, aspernatur ipsum nemo numquam
-            id cupiditate deleniti commodi eos, veniam quos minima voluptas in
-            pariatur ab. Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Voluptatibus rerum ut porro nostrum optio reiciendis amet unde
-            possimus. Similique aut aperiam ut ipsa. Odio alias aliquam sint.
-            Quam, incidunt molestias?
+        <div className="grid grid-cols-2">
+          <h2 className="text-3xl m-2">Skills</h2>
+          <div className="">
+            <span className="text-neutral-400 text-lg font-semibold ">
+              Front-end
+            </span>
+            <hr className="w-full border-neutral-500/90 mb-2" />
+            <div className="grid grid-cols-4 gap-4 ">
+              <Typos header="Typescript" />
+              <Typos header="Javascript" />
+              <Typos header="HTML" />
+              <Typos header="CSS" />
+              <Typos header="React" />
+              <Typos header="Nextjs" />
+              <Typos header="Tailwind" />
+            </div>
           </div>
         </div>
         <hr className="w-full border-neutral-600/90 m-5" />
 
         <div>
-          <h2 className="text-3xl m-2 text-center">My Project</h2>
-          <div className="text-2xl flex justify-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-pink-500 to-orange-400">
+          <div className="w-full items-center justify-center flex">
+            <Button className="text-center text-2xl">My Project</Button>
+          </div>
+          <div className="text-4xl flex justify-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 via-neutral-200 to-white m-2">
             Some of my cool stuff
           </div>
+          <span className="text-center text-white flex items-center ">
+            I've worked on a variety of projects, from simple websites to
+            complex web applications. Here are a few of my favorites.
+          </span>
           <div className="w-full  grid  p-4 space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <CardDemo />
