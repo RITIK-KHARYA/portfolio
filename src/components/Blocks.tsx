@@ -38,7 +38,7 @@ export default function Block({
           <p className="text-foreground-muted text-sm text-align text-wrap text-left text-neutral-300 ">
             {description}
           </p>
-          <div className="flex flex-row items-center justify-start space-x-2 text-center w-auto ">
+          <div className="flex  items-center justify-center space-x-2 text-center w-auto ">
             {header.map((item) => (
               <BlackTypos key={item} header={item} />
             ))}

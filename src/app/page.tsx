@@ -1,6 +1,13 @@
 "use client";
 import Image from "next/image";
-
+import {
+  motion,
+  useInView,
+  useAnimation,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 import { Github, Instagram, Linkedin, Radio, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -145,37 +152,50 @@ export default function Page() {
         </section>
 
         <hr className="border-neutral-600/90 my-8" />
-        <section className="mb-12">
-          <div className="text-center mb-8">
-            <Button className="text-xl md:text-2xl">My Projects</Button>
-          </div>
+        <div className="relative z-0 mx-auto ">
+          <section className="mb-12">
+            <div className=" text-center mb-8">
+              <Button className="text-xl md:text-2xl">My Projects</Button>
+            </div>
 
-          <h2 className="text-3xl md:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 via-neutral-200 to-white mb-4">
-            Some of my cool stuff
-          </h2>
+            <h2 className="text-3xl md:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 via-neutral-200 to-white mb-4">
+              Some of my cool stuff
+            </h2>
 
-          <p className="text-center text-white mb-8 text-sm md:text-base">
-            I've worked on a variety of projects, from simple websites to
-            complex web applications. Here are a few of my favorites.
-          </p>
+            <p className="text-center text-white mb-8 text-sm md:text-base">
+              I've worked on a variety of projects, from simple websites to
+              complex web applications. Here are a few of my favorites.
+            </p>
 
-          <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4">
-            <Block
-              title="Diary "
-              description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
-              image={`/image1.png`}
-              link="/github/RITIK-KHARYA"
-              header={["nextjs", "tailwind", "typescript"]}
-            />
-            <Block
-              title="Trezixmusic "
-              description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
-              image={`/image.png`}
-              link="/github.com/ritik-kharya  "
-              header={["next.js", "tailwind", "typescript", "supabase"]}
-            />
-          </div>
-        </section>
+            <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4">
+              <Block
+                title="Diary "
+                description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
+                image={`/image1.png`}
+                link="/github.com"
+                header={["nextjs", "tailwind", "typescript"]}
+              />
+              <Block
+                title="Trezixmusic "
+                description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
+                image={`/image.png`}
+                link="/github.com/ritik-kharya  "
+                header={["next.js", "tailwind", "typescript", "supabase"]}
+              />
+            </div>
+          </section>
+        </div>
+
+        <motion.div
+          initial={{
+            opacity: 1,
+          }}
+          whileInView={{
+            opacity: 0,
+          }}
+          viewport={{ margin: "-100px" }}
+          className="absolute bg-black z-10 bottom-0 top-0 right-0 left-0"
+        />
 
         <section className="py-8">
           <h2 className="text-2xl md:text-3xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-300 mb-4">
