@@ -2,12 +2,14 @@ import { Github, Globe, Radio } from "lucide-react";
 import BlackTypos from "./Blacktypos";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlockProps {
   image: string;
   title: string;
   description: string;
   link: string;
+  link2: string;
   header: string[];
 }
 
@@ -16,6 +18,7 @@ export default function Block({
   title,
   description,
   link,
+  link2,
   header,
 }: BlockProps) {
   return (
@@ -38,26 +41,26 @@ export default function Block({
           <p className="text-foreground-muted text-sm text-align text-wrap text-left text-neutral-300 ">
             {description}
           </p>
-          <div className="flex  items-center justify-center space-x-2 text-center w-auto ">
+          <div className="flex flex-wrap items-center justify-start gap-y-1 gap-x-2 text-center ">
             {header.map((item) => (
               <BlackTypos key={item} header={item} />
             ))}
           </div>
         </div>
         <div className="flex flex-row items-center justify-start mx-5 mt-3 gap-x-2 ">
-          <a
-            type="button"
-            className="bg-white text-black rounded-md w-20 h-6 flex items-center justify-center text-sm"
-            href={link}
-          >
-            <div className="flex flex-row items-center justify-center gap-[5px]  hover:bg-neutral-300 w-full rounded-md">
-              <Globe size={15} />
-              Github
-            </div>
-          </a>
-          <Button className="text-sm w-20 h-6 rounded-md bg-neutral-100">
-            <Radio size={"md"} />
-            Live
+          <div className="bg-white text-black rounded-md w-20 h-6 flex items-center justify-center text-sm">
+            <Button className="flex flex-row items-center justify-center gap-[5px]  w-20 h-6  hover:bg-neutral-300  rounded-md  ">
+              <Link href={link} className="flex flex-row items-center gap-x-1">
+                <Globe size={15} />
+                Github
+              </Link>
+            </Button>
+          </div>
+          <Button className="text-sm w-20 h-6 rounded-md bg-neutral-100 cursor-pointer">
+            <Link href={link2} className="flex flex-row items-center gap-x-1">
+              <Radio size={"md"} />
+              Live
+            </Link>
           </Button>
         </div>
       </div>

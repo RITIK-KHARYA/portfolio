@@ -13,6 +13,7 @@ import { Github, Instagram, Linkedin, Radio, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Typos from "@/components/typos";
 import Block from "@/components/Blocks";
+import Upperslide from "@/components/Upperslide";
 
 export default function Page() {
   const socialLinks = [
@@ -48,36 +49,8 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-black overflow-y-auto px-4 py-6 md:py-8">
-      <div className="max-w-[680px] mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-8">
-          <div className="flex items-center gap-4">
-            <Image
-              src={`/static/image/artoons.png`}
-              alt="ritik"
-              width={1920}
-              height={1080}
-              className="rounded-xl w-16 h-16 md:w-20 md:h-20 object-cover"
-            />
-            <div className="flex flex-col">
-              <div className="text-xl font-bold">Ritik Kharya</div>
-              <span className="text-sm md:text-base">
-                19-years old tech enthusiast
-              </span>
-            </div>
-          </div>
-
-          <div className="flex gap-2 md:gap-3">
-            {socialLinks.map((icon) => (
-              <a
-                href={icon.href}
-                className="w-8 h-8 rounded-sm bg-card flex items-center justify-center hover:bg-neutral-800/90 transition-colors"
-                key={icon.name}
-              >
-                {icon.icon}
-              </a>
-            ))}
-          </div>
-        </div>
+      <div className=" max-w-[680px] mx-auto">
+        <Upperslide />
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">About</h2>
@@ -108,7 +81,17 @@ export default function Page() {
 
         <hr className="border-neutral-600/90 my-8" />
 
-        <section className="mb-8">
+        <section className="relative mb-8">
+          <motion.div
+            initial={{
+              opacity: 1,
+            }}
+            whileInView={{
+              opacity: 0,
+            }}
+            viewport={{ margin: "-80px", once: true }}
+            className="absolute bg-black z-10 left-0 right-0 top-0 bottom-0 max-w-[720px] "
+          />
           <h2 className="text-2xl font-bold mb-6">Skills</h2>
 
           <div className="mb-6">
@@ -152,7 +135,18 @@ export default function Page() {
         </section>
 
         <hr className="border-neutral-600/90 my-8" />
-        <div className="relative z-0 mx-auto ">
+
+        <div className=" z-0 mx-auto relative ">
+          <motion.div
+            initial={{
+              opacity: 1,
+            }}
+            whileInView={{
+              opacity: 0,
+            }}
+            viewport={{ margin: "-100px", once: true }}
+            className="absolute bg-black z-10 left-0 right-0 top-0 bottom-0 max-w-[720px] "
+          />
           <section className="mb-12">
             <div className=" text-center mb-8">
               <Button className="text-xl md:text-2xl">My Projects</Button>
@@ -166,37 +160,34 @@ export default function Page() {
               I've worked on a variety of projects, from simple websites to
               complex web applications. Here are a few of my favorites.
             </p>
-
-            <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4">
-              <Block
-                title="Diary "
-                description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
-                image={`/image1.png`}
-                link="/github.com"
-                header={["nextjs", "tailwind", "typescript"]}
-              />
-              <Block
-                title="Trezixmusic "
-                description="Ritik hey there is your papa oianc ofin  ifnrwon roenvr orve vpenv"
-                image={`/image.png`}
-                link="/github.com/ritik-kharya  "
-                header={["next.js", "tailwind", "typescript", "supabase"]}
-              />
-            </div>
           </section>
         </div>
 
-        <motion.div
-          initial={{
-            opacity: 1,
-          }}
-          whileInView={{
-            opacity: 0,
-          }}
-          viewport={{ margin: "-100px" }}
-          className="absolute bg-black z-10 bottom-0 top-0 right-0 left-0"
-        />
-
+        <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 gap-4 ">
+          <Block
+            title="Diary "
+            description="A microblogging website which allows you to share your thoughts and connect with people around world "
+            image={`/image1.png`}
+            link2="https://diarycover.vercel.app/"
+            link="https://github.com/RITIK-KHARYA/diary"
+            header={[
+              "nextjs",
+              "tailwind",
+              "typescript,",
+              "prisma",
+              "neondb",
+              "react-query",
+            ]}
+          />
+          <Block
+            title="Trezixmusic "
+            description="A music streaming website where you can listen to millions of songs in one place"
+            image={`/image.png`}
+            link2="https://github.com/RITIK-KHARYA/trezixmusic"
+            link="https://github.com/RITIK-KHARYA/trezixmusic "
+            header={["next.js", "tailwind", "typescript", "supabase", "prisma"]}
+          />
+        </div>
         <section className="py-8">
           <h2 className="text-2xl md:text-3xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-300 mb-4">
             Hook with me
