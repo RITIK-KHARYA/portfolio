@@ -1,26 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ScrollAnimation from "./scrollAnimation";
 
 export default function About() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-neutral-900 p-6 rounded-lg"
-    >
-      <h2 className="text-3xl font-bold mb-6">About Me</h2>
-      <p className="text-lg text-gray-300 leading-relaxed">
-        Hi, I’m Ritik, a full-stack web developer with 2 years of experience
-        crafting dynamic, user-centric websites. Passionate about emerging
-        technologies, I thrive on transforming innovative ideas into functional
-        digital solutions. Currently in my sophomore year, I balance academic
-        pursuits with hands-on development, continuously expanding my expertise
-        in modern frameworks and tools. Dedicated to growth, I embrace every
-        opportunity to refine my skills and deliver impactful web experiences
-        that bridge creativity and technical precision
-      </p>
-    </motion.section>
+    <ScrollAnimation>
+      <section className="bg-neutral-900 p-6 rounded-lg">
+        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Based in the city, I'm a college sophomore mixing code with
+          creativity. My day flows between intense coding sessions and chill
+          breaks with books and anime. Being both outgoing and introspective
+          helps me groove with my own rhythm - whether that's late-night coding
+          or team projects. I'm teaching myself full-stack development, building
+          websites from scratch while keeping life balanced with friends and
+          fun. That's my vibe - focused when it counts, relaxed when needed.
+        </p>
+      </section>
+    </ScrollAnimation>
   );
 }
