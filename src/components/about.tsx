@@ -8,7 +8,7 @@ export default function About() {
     <ScrollAnimation>
       <section className="bg-neutral-900 p-6 rounded-lg">
         <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <p className="text-lg text-gray-300 leading-relaxed">
+        <p className="text-sm text-gray-300 leading-relaxed">
           Hi, I’m Ritik, a full-stack web developer with 2 years of experience
           crafting dynamic, user-centric websites. Passionate about emerging
           technologies, I thrive on transforming innovative ideas into

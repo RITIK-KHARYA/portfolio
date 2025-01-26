@@ -48,8 +48,8 @@ export default function Header() {
           className="rounded-full"
         />
         <div>
-          <h1 className="text-3xl font-bold">Ritik Kharya</h1>
-          <p className="text-xl text-gray-400">19-year-old tech enthusiast</p>
+          <h1 className="text-xl font-bold">Ritik Kharya</h1>
+          <p className="text-lg text-zinc-400">19-year-old tech enthusiast</p>
         </div>
       </div>
       <div className="flex gap-4">
@@ -57,7 +57,7 @@ export default function Header() {
           <a
             key={link.name}
             href={link.href}
-            className={`p-2 rounded-full bg-neutral-900 ${link.color} transition-colors`}
+            className={`p-2 bg-transparent ${link.color} transition-colors`}
             aria-label={link.name}
           >
             <link.icon size={24} />

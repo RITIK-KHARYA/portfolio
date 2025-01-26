@@ -38,7 +38,7 @@ export default function Contact() {
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      <h2 className="text-3xl font-bold mb-6">Connect With Me</h2>
+      <h2 className="text-xl font-bold mb-6">Connect With Me</h2>
       <p className="text-lg text-gray-300 mb-8">
         Let's create something amazing together!
       </p>
@@ -47,7 +47,7 @@ export default function Contact() {
           <motion.a
             key={link.name}
             href={link.href}
-            className={`p-3 rounded-full bg-neutral-900 ${link.color} transition-colors`}
+            className={`p-3 ${link.color} transition-colors`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ScrollAnimation from "./scrollAnimation";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { GithubIcon, SquareArrowOutUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -20,16 +20,24 @@ const projects = [
       "Prisma",
       "NeonDB",
       "Tanstack Query",
+      "React",
     ],
   },
   {
     title: "Trezixmusic",
     description:
-      "A music streaming website where you can listen to millions of songs in one place",
+      "A music streaming website where you can upload and listen to millions of songs in one place",
     image: "/image.png",
     liveLink: "https://github.com/RITIK-KHARYA/trezixmusic",
     githubLink: "https://github.com/RITIK-KHARYA/trezixmusic",
-    technologies: ["Next.js", "Tailwind", "TypeScript", "Supabase", "Prisma"],
+    technologies: [
+      "Next.js",
+      "Tailwind",
+      "TypeScript",
+      "Supabase",
+      "Prisma",
+      "React",
+    ],
   },
 ];
 
@@ -68,7 +76,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 justify-between">
                   <a
                     href={project.liveLink}
                     className="px-4 py-2 bg-white rounded-none text-xs text-align-center text-black font-medium transition-colors"
@@ -78,9 +86,9 @@ export default function Projects() {
                   </a>
                   <a
                     href={project.githubLink}
-                    className="px-4 py-2 bg-neutral-800 rounded-full text-sm font-medium hover:bg-neutral-700 transition-colors"
+                    className="px-4 py-2 bg-neutral-800 rounded-none text-xs font-medium hover:bg-neutral-800/40 transition-colors"
                   >
-                    GitHub
+                    <GithubIcon className="p-auto inline-block " />
                   </a>
                 </div>
               </div>
